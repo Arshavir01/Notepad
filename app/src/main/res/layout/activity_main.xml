@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.notepad.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        android:padding="10dp"
+        android:background="#FFE57F"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="288dp"
+            android:layout_marginTop="428dp"
+            android:background="#00FFFFFF"
+            android:onClick="addClick"
+            app:srcCompat="@drawable/add_note1" />
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#424242"
+            android:fontFamily="casual"
+            android:textSize="24dp"
+            android:textStyle="italic|bold"
+            android:text="Note List"/>
+
+
+        <ListView
+            android:layout_width="368dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:id="@+id/listId"
+            android:dividerHeight="3dp"
+            android:divider="#000000"/>
+
+        <TextView
+            android:id="@+id/longPressTVId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listId"
+            android:layout_marginTop="15dp"
+            android:textColor="#616161"
+            android:text="Press long on item for delete"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/longPressTVId"
+            android:textColor="#616161"
+            android:text="Press on item for edit"/>
+
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

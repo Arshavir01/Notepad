@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37474F"
+    tools:context="com.example.user.notepad.AddNoteActivity">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        android:padding="10dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <EditText
+            android:id="@+id/noteTitleId"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_marginTop="35dp"
+            android:paddingLeft="10dp"
+            android:background="#FFE57F"
+            android:inputType="textPersonName"
+            android:textColorHint="#616161"
+            android:textColor="#000000"
+            android:hint="Title" />
+
+        <EditText
+            android:id="@+id/noteTextId"
+            android:layout_width="340dp"
+            android:layout_height="380dp"
+            android:ems="10"
+            android:padding="10dp"
+            android:gravity="top"
+            android:layout_marginTop="5dp"
+            android:background="#FFE57F"
+            android:layout_below="@+id/noteTitleId"
+            android:inputType="textMultiLine"
+            android:textColorHint="#616161"
+            android:textColor="#000000"
+            android:hint="Input Text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="290dp"
+            android:onClick="saveClick"
+            android:text="Save"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
