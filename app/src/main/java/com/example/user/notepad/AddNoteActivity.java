@@ -1,5 +1,6 @@
 package com.example.user.notepad;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -62,7 +63,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
         //if fields not empty save it in Realm database
         if(text_str.isEmpty()){
-            Toast.makeText(this, "Fill TextField", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Fill Text Field", Toast.LENGTH_SHORT).show();
         }else{
             realm.executeTransaction(new Realm.Transaction() {
                 @Override
@@ -99,5 +100,23 @@ public class AddNoteActivity extends AppCompatActivity {
                 results.deleteFromRealm(pos);
             }
         });
+    }
+
+    //Share button
+    public void shareClick(View view) {
+        String subject = titleET.getText().toString();
+        String text = textET.getText().toString();
+
+        if(text.isEmpty()){
+            Toast.makeText(this,"Fill Text Field", Toast.LENGTH_LONG).show();
+
+        }else {
+            Intent intent;
+            intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+            intent.putExtra(Intent.EXTRA_TEXT, text);
+            startActivity(Intent.createChooser(intent, "Share via"));
+        }
     }
 }
