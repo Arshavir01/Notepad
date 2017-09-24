@@ -14,6 +14,16 @@
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
 
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/saveClickId"
+            android:background="#00FFFFFF"
+            android:onClick="shareClick"
+            app:srcCompat="@drawable/share_btn" />
+
         <EditText
             android:id="@+id/noteTitleId"
             android:layout_width="match_parent"
@@ -43,12 +53,13 @@
             android:hint="Input Text" />
 
         <TextView
+            android:id="@+id/saveClickId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="22dp"
             android:textStyle="bold"
-            android:layout_marginLeft="490dp"
+            android:layout_marginLeft="460dp"
             android:onClick="saveClick"
             android:text="Save"/>
 
